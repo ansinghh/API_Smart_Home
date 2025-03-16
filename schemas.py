@@ -1,7 +1,6 @@
 # schemas.py
 from pydantic import BaseModel
 
-# ------------------- USER -------------------
 class UserCreate(BaseModel):
     name: str
     email: str
@@ -15,7 +14,6 @@ class UserOut(BaseModel):
     class Config:
         from_attributes = True
 
-# ------------------- HOUSE -------------------
 class HouseCreate(BaseModel):
     user_id: str
     name: str
@@ -30,7 +28,6 @@ class HouseOut(BaseModel):
     class Config:
         orm_mode = True
 
-# ------------------- ROOM -------------------
 class RoomCreate(BaseModel):
     house_id: str
     name: str
@@ -45,7 +42,6 @@ class RoomOut(BaseModel):
     class Config:
         orm_mode = True
 
-# ------------------- DEVICE -------------------
 class DeviceCreate(BaseModel):
     room_id: str
     device_name: str

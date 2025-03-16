@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # SQLite URL
-SQLALCHEMY_DATABASE_URL = "sqlite:///./app.db"
+SQLALCHEMY_DATABASE_URL = "sqlite:///./smart_home_api.db"
 
 # Create the engine
 engine = create_engine(
